@@ -1,5 +1,6 @@
 package com.example.corotinas
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -22,8 +23,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        startActivity(Intent(this, Exemplo3::class.java))
+
         btnProcessar = findViewById(R.id.btnProcessar)
-        txtResultado = findViewById(R.id.txtResultado)
+        txtResultado = findViewById(R.id.txtResultadoDados)
 
         btnProcessar.setOnClickListener {
             txtResultado.text = "Iniciando processamento..."

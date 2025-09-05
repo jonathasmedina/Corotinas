@@ -20,7 +20,7 @@ class CorotinaExemplo2 : AppCompatActivity() {
         setContentView(R.layout.activity_corotina_exemplo2)
 
         btnProcessar = findViewById(R.id.btnProcessar)
-        txtResultado = findViewById(R.id.txtResultado)
+        txtResultado = findViewById(R.id.txtResultadoDados)
         txtContador = findViewById(R.id.txtContador)
 
         btnProcessar.setOnClickListener {
