@@ -17,6 +17,7 @@ class Exemplo3 : AppCompatActivity() {
 
     private lateinit var btnCarregarM: Button
     private lateinit var progressBarM: ProgressBar
+    private lateinit var progressBarH: ProgressBar
     private lateinit var txtResultadoM: TextView
     private lateinit var btnToast: Button
 
@@ -28,6 +29,7 @@ class Exemplo3 : AppCompatActivity() {
         progressBarM = findViewById(R.id.progressBarDados)
         txtResultadoM = findViewById(R.id.txtResultadoDados)
         btnToast = findViewById(R.id.btnToast)
+        progressBarH = findViewById(R.id.progressBarHorizontal)
 
 
         btnCarregarM.setOnClickListener {
@@ -47,7 +49,14 @@ class Exemplo3 : AppCompatActivity() {
         lifecycleScope.launch {
             // Simula tarefa de rede ou banco (demora 3 segundos)
             val resultado = withContext(Dispatchers.IO) {
-                delay(5000) // suspensão sem travar a tela
+                //delay(5000) // suspensão sem travar a tela
+
+                //ver a progress bar horizontal enchendo
+                for (i in 1..100) {
+                    progressBarH.progress = i
+                    delay(100)
+                }
+
 
                 "Dados carregados."
             }
